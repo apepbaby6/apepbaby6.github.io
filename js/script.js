@@ -87,7 +87,9 @@ $(document).ready(function(){
         $.ajax ({
             type: "POST",
             url: "../mailer/smart.php",
-            data: $(this).serialize()
+            data: $(this).serialize(),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json"
         }).done(function() {
             $(this).find("input").val("");
             $('#consultation, #order').fadeOut();
