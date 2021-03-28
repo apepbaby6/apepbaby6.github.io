@@ -85,7 +85,7 @@ $(document).ready(function(){
     $('form').submit(function(e){
         e.preventDefault();
         $.ajax ({
-            type: "POST",
+            type: "GET",
             url: "../mailer/smart.php",
             data: $(this).serialize()
         }).done(function() {
